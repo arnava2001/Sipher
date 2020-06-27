@@ -3,6 +3,8 @@ import java.awt.EventQueue;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import java.awt.Color;
+import java.awt.Cursor;
+
 import javax.swing.JLabel;
 import com.jgoodies.forms.factories.DefaultComponentFactory;
 import java.awt.BorderLayout;
@@ -79,7 +81,7 @@ public class SipherGUI {
 		MainFrame.getContentPane().setBackground(new Color(75, 0, 130));
 		MainFrame.getContentPane().setForeground(new Color(0, 0, 0));
 		MainFrame.getContentPane().setLayout(new CardLayout(0, 0));
-		
+		MainFrame.setUndecorated(true);
 		JPanel StartingPanel = new JPanel();
 		StartingPanel.setBackground(Color.WHITE);
 		MainFrame.getContentPane().add(StartingPanel, "startPan");
@@ -737,6 +739,7 @@ public class SipherGUI {
 		btnRotationCipher.setOpaque(true);
 		btnRotationCipher.setForeground(new Color(255, 255, 255));
 		btnRotationCipher.setBackground(new Color(0, 0, 0));
+		btnRotationCipher.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnRotationCipher.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				CardLayout c = (CardLayout)(MainFrame.getContentPane().getLayout()); 
@@ -756,6 +759,7 @@ public class SipherGUI {
 		btnHome.setFocusPainted(false);
 		btnHome.setBorderPainted(false);
 		btnHome.setBackground(Color.BLACK);
+		btnHome.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		menuBar.add(btnHome);
 		menuBar.add(btnRotationCipher);
 		
@@ -772,7 +776,8 @@ public class SipherGUI {
 		btnVignereCipher.setBackground(new Color(0, 0, 0));
 		btnVignereCipher.setOpaque(true);
 		menuBar.add(btnVignereCipher);
-		
+		btnVignereCipher.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+
 		JButton btnSha = new JButton("SHA-1");
 		btnSha.setFocusPainted(false);
 		btnSha.setBorderPainted(false);
@@ -786,6 +791,8 @@ public class SipherGUI {
 		btnSha.setBackground(new Color(0, 0, 0));
 		btnSha.setOpaque(true);
 		menuBar.add(btnSha);
+		btnSha.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+
 		
 		JButton btnPasswordGenerator = new JButton("PASSWORD GENERATOR");
 		btnPasswordGenerator.setFocusPainted(false);
@@ -796,6 +803,8 @@ public class SipherGUI {
 				c.show(MainFrame.getContentPane(), "pw"); 
 			}
 		});
+		btnPasswordGenerator.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+
 		
 		JButton btnPasswordGenerator_1 = new JButton("SHA-256");
 		btnPasswordGenerator_1.addActionListener(new ActionListener() {
@@ -813,7 +822,36 @@ public class SipherGUI {
 		btnPasswordGenerator.setForeground(new Color(255, 255, 255));
 		btnPasswordGenerator.setBackground(new Color(0, 0, 0));
 		btnPasswordGenerator.setOpaque(true); 
+		btnPasswordGenerator_1.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+
 		menuBar.add(btnPasswordGenerator);
+		
+		JButton btnPasswordGenerator_2 = new JButton("\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E\u200F\u200F\u200E \u200E");
+		btnPasswordGenerator_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnPasswordGenerator_2.setOpaque(true);
+		btnPasswordGenerator_2.setForeground(Color.WHITE);
+		btnPasswordGenerator_2.setFocusPainted(false);
+		btnPasswordGenerator_2.setBorderPainted(false);
+		btnPasswordGenerator_2.setBackground(Color.BLACK);
+		menuBar.add(btnPasswordGenerator_2);
+		
+		JButton btnX = new JButton("\u200E\u200EX");
+		btnX.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
+		btnX.setOpaque(true);
+		btnX.setForeground(Color.RED);
+		btnX.setFocusPainted(false);
+		btnX.setBorderPainted(false);
+		btnX.setBackground(Color.BLACK);
+		btnX.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+
+		menuBar.add(btnX);
 	}
 	
 	private Image getScaledImage(Image srcImg, int w, int h){
